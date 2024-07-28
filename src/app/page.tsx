@@ -4,8 +4,14 @@ import TextField from "@/components/Form/TextField";
 import Link from "@/components/Link";
 import Pagination from "@/components/Pagination";
 import Alert from "@/components/Alert";
+import { getServerSession } from "next-auth";
+import { redirect } from "next/navigation";
 
-export default function Home() {
+export default async function Home() {
+  const session = await getServerSession();
+  console.log({ session });
+  if (!session?.user) redirect("/login");
+
   return (
     <section>
       pagina principal

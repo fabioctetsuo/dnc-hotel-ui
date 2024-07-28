@@ -2,17 +2,27 @@
   "users": [
     {
       "id": 1,
-      "name": "Fabio Tetsuo",
       "email": "fabio@teste.com",
-      "password": "12345",
-      "avatar": null
+      "name": "Fabio Tetsuo",
+      "role": "ADMIN",
+      "avatar": null,
+      "createdAt": "2024-07-28T16:25:58.655Z",
+      "password": "12345"
     },
     {
       "id": 2,
       "name": "Joao Teste",
       "email": "joao@teste.com",
       "password": "12345",
+      "createdAt": "2024-07-28T16:25:58.655Z",
       "avatar": null
+    },
+    {
+      "name": "Fulano de Tal",
+      "email": "fulano@teste.com",
+      "password": "asdasd",
+      "role": "ADMIN",
+      "id": 3
     }
   ]
 }

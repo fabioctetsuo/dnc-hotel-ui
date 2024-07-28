@@ -31,5 +31,32 @@ app.post('/auth/login', (req, res) => {
     }
 })
 
+app.post('/auth/register', (req, res) => {
+    const body = req.body;
+    const users = app.get('users').value();
+    const id = users.length ? Math.max(...users.map(user => user.id)) : 1
+
+    const newUser = {
+        ...body,
+        id: id + 1,
+        avatar: null,
+        createdAt: new Date().toISOString()
+    };
+    app.get('users').push(newUser).write()
+
+    return res.status(201).jsonp(newUser)
+})
+
+app.post('/users/avatar', (req, res) => {
+    res.status(201).jsonp({
+        "id": 1,
+        "email": "fabio@teste.com",
+        "name": "Fabio Tetsuo",
+        "role": "ADMIN",
+        "avatar": "3fa9959b-5883-4eeb-ac8f-89ff7d9b2b84tester.jpg",
+        "createdAt": "2024-07-28T16:25:58.655Z"
+    })
+})
+
 app.use(router);
 app.listen(3000);

@@ -4,19 +4,28 @@ import Button from "@/components/Button";
 import Link from "@/components/Link";
 import { signIn } from "next-auth/react";
 import { FormEvent } from "react";
+import { useRouter } from "next/navigation";
 
 export default function LoginPage() {
+  const router = useRouter();
+
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const form = event.target as HTMLFormElement;
     const email = form.email.value;
     const password = form.password.value;
 
-    await signIn("credentials", {
+    const response = await signIn("credentials", {
       redirect: false,
       email,
       password,
     });
+
+    if (response?.ok) {
+      router.push("/");
+    } else {
+      alert("erro na autenticação");
+    }
   };
 
   return (
