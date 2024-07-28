@@ -47,6 +47,10 @@ app.post('/auth/register', (req, res) => {
     return res.status(201).jsonp(newUser)
 })
 
+app.post('/auth/forgot-password', (req, res) => {
+    res.status(201).send('A verification code has been sent to fabio@teste.com')
+})
+
 app.post('/users/avatar', (req, res) => {
     res.status(201).jsonp({
         "id": 1,
