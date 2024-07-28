@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Fabio Tetsuo",
+      "email": "fabio@teste.com",
+      "password": "12345",
+      "avatar": null
+    },
+    {
+      "id": 2,
+      "name": "Joao Teste",
+      "email": "joao@teste.com",
+      "password": "12345",
+      "avatar": null
+    }
+  ]
+}
