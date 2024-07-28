@@ -1,28 +1,57 @@
-import Button from "@/components/Button";
-import ImageField from "@/components/Form/ImageField";
-import TextField from "@/components/Form/TextField";
-import Link from "@/components/Link";
-import Pagination from "@/components/Pagination";
-import Alert from "@/components/Alert";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
+import Image from "next/image";
+import { getHotels } from "./api/hotels/route";
+import Pagination from "@/components/Pagination";
 
-export default async function Home() {
+type SearchParams = {
+  page: string;
+};
+
+type PageProps = {
+  searchParams: SearchParams;
+};
+
+const LIMIT = 10;
+
+export default async function Home({ searchParams }: PageProps) {
   const session = await getServerSession();
-  console.log({ session });
   if (!session?.user) redirect("/login");
 
+  const currentPage = searchParams.page ?? "1";
+
+  const { data, total, per_page } = await getHotels(currentPage, LIMIT);
+
   return (
-    <section>
-      pagina principal
-      <Button>clique em mim</Button>
-      <Button appearance="secondary">clique em mim</Button>
-      <Link href="/teste">Ir para teste</Link>
-      <TextField label="Nome completo" id="full_name" name="full_name" />
-      <ImageField label="Selecione a foto" id="profile_picture" />
-      <Pagination currentPage={98} destination="/" totalPages={100} />
-      <Alert type="success">Esse é um feedback de sucesso</Alert>
-      <Alert type="danger">Falha na operação, tente novamente</Alert>
-    </section>
+    <div>
+      <section className="grid grid-cols-1 gap-4 px-10 py-10 sm:grid-cols-2 sm:px-20 md:grid-cols-3 lg:grid-cols-4 xl:px-48 mt-20">
+        {data.map((hotel) => {
+          return (
+            <article key={hotel.id} className="flex flex-col">
+              <div className="w-full h-48 sm:w-48">
+                <Image
+                  src={hotel.image ? hotel.image : "/no-hotel.jpg"}
+                  width={250}
+                  height={250}
+                  alt={`Foto do hotel ${hotel.name}`}
+                  className="w-full h-48 sm:w-48 object-cover rounded-3xl"
+                />
+              </div>
+
+              <span className="font-bold mt-2">{hotel.name}</span>
+              <span className="mt-2">{hotel.owner.name}</span>
+              <span className="mt-2">{hotel.price}</span>
+            </article>
+          );
+        })}
+      </section>
+      <section className="flex justify-center mt-4 mb-8">
+        <Pagination
+          currentPage={Number(currentPage)}
+          destination="/"
+          totalPages={Math.ceil(total / per_page)}
+        />
+      </section>
+    </div>
   );
 }

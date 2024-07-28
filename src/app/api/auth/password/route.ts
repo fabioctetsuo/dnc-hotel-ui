@@ -13,3 +13,20 @@ export async function forgotPassword(prevState: any, formData: FormData) {
 
     redirect('/recuperar-senha')    
 }
+
+export async function recoverPassword(prevState: any, formData: FormData) {
+    try {
+        const payload = {
+            "token": formData.get('token'),
+            "password": formData.get('password'),
+        }
+    
+        const { data } = await axios.patch('/auth/reset-password', payload);
+
+        return { success: true, result: data }
+    } catch (error) {
+        return { ...prevState, message: 'Erro ao atualizar a senha' }
+    }
+
+    redirect('/recuperar-senha')    
+}

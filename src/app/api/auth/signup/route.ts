@@ -2,7 +2,7 @@
 import axios from "@/api";
 import { redirect } from "next/navigation";
 
-export async function signup(formData: FormData) {
+export async function signup(prevState: any, formData: FormData) {
     try {
         const avatar = formData.get('avatar') as any;
         const formDataAvatar = new FormData()
@@ -15,11 +15,7 @@ export async function signup(formData: FormData) {
             "role":  formData.get('role')
         }
     
-        const { data } = await axios.post('/users', payload);
-        const { data: { access_token } } = await axios.post('/auth/login', {
-            email: formData.get('email'),
-            password: formData.get('password'),
-        });
+        const { data: { access_token } } = await axios.post('/auth/register', payload);
     
         if (avatar) {
             const avatarData = await axios.post('/users/avatar', formDataAvatar, {
@@ -30,6 +26,7 @@ export async function signup(formData: FormData) {
         }
     } catch (error) {
         console.log('trata o erro', {error})
+        return { ...prevState, message: 'Não foi possível cadastrar o usuário' }
     }
     
     redirect('/login')
