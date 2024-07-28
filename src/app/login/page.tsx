@@ -1,14 +1,30 @@
+"use client";
 import TextField from "@/components/Form/TextField";
 import Button from "@/components/Button";
 import Link from "@/components/Link";
+import { signIn } from "next-auth/react";
+import { FormEvent } from "react";
 
 export default function LoginPage() {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const form = event.target as HTMLFormElement;
+    const email = form.email.value;
+    const password = form.password.value;
+
+    await signIn("credentials", {
+      redirect: false,
+      email,
+      password,
+    });
+  };
+
   return (
     <article className="max-w-96 w-full flex justify-center items-center flex-col py-4 px-6 border border-light-grey-500 rounded-2xl">
       <span>Entrar ou cadastrar-se</span>
 
       <h3 className="w-full text-left text-xl pt-4">Bem vindo a DNC Hotel!</h3>
-      <form className="w-full">
+      <form className="w-full" onSubmit={handleSubmit}>
         <TextField
           id="email"
           name="email"
