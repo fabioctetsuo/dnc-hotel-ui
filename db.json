@@ -27,235 +27,224 @@
   ],
   "hotels": [
     {
-      "id":1,
-      "name":"Hotel DNC Eletro",
-      "description":"Hotel bonito",
-      "address":"Rua Dnc, 123",
-      "image":"/hotel1.jpg",
-      "price":300,
-      "ownerId":1,
-      "createdAt":"2024-07-28T16:26:43.149Z",
-      "updatedAt":"2024-07-28T21:28:53.337Z",
-      "owner":{
+      "id": 1,
+      "name": "Hotel Teste 1",
+      "description": "Hotel bonito",
+      "address": "Rua Dnc, 123",
+      "image": "/hotel1.jpg",
+      "price": 300,
+      "ownerId": 1,
+      "createdAt": "2024-08-10T16:35:12.233Z",
+      "updatedAt": "2024-08-10T16:35:12.233Z",
+      "owner": {
         "id":1,
-        "name":"Fabio Tetsuo",
         "email":"fabio@teste.com",
-        "password":"$2b$10$cQnUP1kgnpp2sM2P0pWLMegDmyg86ONypgXFjaLvK6oWk3GnOCbCG",
+        "name":"Fabio Tetsuo",
         "role":"ADMIN",
-        "avatar":"3fa9959b-5883-4eeb-ac8f-89ff7d9b2b84tester.jpg",
+        "avatar":null,
         "createdAt":"2024-07-28T16:25:58.655Z",
-        "updatedAt":"2024-07-28T20:53:15.612Z"
-      }
+        "password":"12345"
+      } 
     },
     {
-      "id":2,
-      "name":"Cabana de Luxo",
-      "description":"A Cabana do Sossego foi inspirada nas Cabanas americanas e canadenses. Um encontro lindo da natureza com a Arquitetura.",
-      "address":"Bairro Mellos, Minas Gerais, Brasil",
-      "image":"/hotel2.jpg",
-      "price":860,
-      "ownerId":1,
-      "createdAt":"2024-07-28T21:17:15.161Z",
-      "updatedAt":"2024-07-28T21:27:52.461Z",
-      "owner":{
+      "id": 2,
+      "name": "Hotel Teste 2",
+      "description": "Hotel bonito",
+      "address": "Rua Dnc, 123",
+      "image": null,
+      "price": 300,
+      "ownerId": 1,
+      "createdAt": "2024-08-10T16:35:12.233Z",
+      "updatedAt": "2024-08-10T16:35:12.233Z",
+      "owner": {
         "id":1,
-        "name":"Fabio Tetsuo",
         "email":"fabio@teste.com",
-        "password":"$2b$10$cQnUP1kgnpp2sM2P0pWLMegDmyg86ONypgXFjaLvK6oWk3GnOCbCG",
+        "name":"Fabio Tetsuo",
         "role":"ADMIN",
-        "avatar":"3fa9959b-5883-4eeb-ac8f-89ff7d9b2b84tester.jpg",
+        "avatar":null,
         "createdAt":"2024-07-28T16:25:58.655Z",
-        "updatedAt":"2024-07-28T20:53:15.612Z"
-      }
+        "password":"12345"
+      } 
     },
     {
-      "id":3,
-      "name":"Microcasa em Córrego do Bom Jesus",
-      "description":"Experiência única em uma casa com arquitetura moderna e vista para as montanhas da Serra da Mantiqueira.",
-      "address":"Córrego do Bom Jesus, Minas Gerais, Brasil",
-      "image":null,
-      "price":690,
-      "ownerId":1,
-      "createdAt":"2024-07-28T21:18:23.343Z",
-      "updatedAt":"2024-07-28T21:18:23.343Z",
-      "owner":{
+      "id": 3,
+      "name": "Hotel Teste 3",
+      "description": "Hotel bonito",
+      "address": "Rua Dnc, 123",
+      "image": "/hotel2.jpg",
+      "price": 300,
+      "ownerId": 1,
+      "createdAt": "2024-08-10T16:35:12.233Z",
+      "updatedAt": "2024-08-10T16:35:12.233Z",
+      "owner": {
         "id":1,
-        "name":"Fabio Tetsuo",
         "email":"fabio@teste.com",
-        "password":"$2b$10$cQnUP1kgnpp2sM2P0pWLMegDmyg86ONypgXFjaLvK6oWk3GnOCbCG",
+        "name":"Fabio Tetsuo",
         "role":"ADMIN",
-        "avatar":"3fa9959b-5883-4eeb-ac8f-89ff7d9b2b84tester.jpg",
+        "avatar":null,
         "createdAt":"2024-07-28T16:25:58.655Z",
-        "updatedAt":"2024-07-28T20:53:15.612Z"
-      }
+        "password":"12345"
+      } 
     },
     {
-      "id":4,
-      "name":"Cabana dos Ventos",
-      "description":"Esqueça de suas preocupações neste lugar espaçoso e tranquilo. Em meio à Mantiqueira a 1300 m de altitude, vizinha de uma unidade de conservação, com trilhas e cachoeiras privativas.",
-      "address":"Itajubá, Minas Gerais, Brasil",
-      "image":"/hotel3.jpg",
-      "price":960,
-      "ownerId":1,
-      "createdAt":"2024-07-28T21:19:26.780Z",
-      "updatedAt":"2024-07-28T21:32:33.868Z",
-      "owner":{
+      "id": 4,
+      "name": "Hotel Teste 4",
+      "description": "Hotel bonito",
+      "address": "Rua Dnc, 123",
+      "image": "/hotel3.jpg",
+      "price": 300,
+      "ownerId": 1,
+      "createdAt": "2024-08-10T16:35:12.233Z",
+      "updatedAt": "2024-08-10T16:35:12.233Z",
+      "owner": {
         "id":1,
-        "name":"Fabio Tetsuo",
         "email":"fabio@teste.com",
-        "password":"$2b$10$cQnUP1kgnpp2sM2P0pWLMegDmyg86ONypgXFjaLvK6oWk3GnOCbCG",
+        "name":"Fabio Tetsuo",
         "role":"ADMIN",
-        "avatar":"3fa9959b-5883-4eeb-ac8f-89ff7d9b2b84tester.jpg",
+        "avatar":null,
         "createdAt":"2024-07-28T16:25:58.655Z",
-        "updatedAt":"2024-07-28T20:53:15.612Z"
-      }
+        "password":"12345"
+      } 
     },
     {
-      "id":5,
-      "name":"Apto vista ao mar / pé na areia Praia Gonzaguinha",
-      "description":"Excelente KITNET de frente ao mar com uma vista belíssima no 10º  andar. A uma quadra do shopping Brisamar, Supermercado Sonda e da Biquinha,",
-      "address":"Gonzaguinha, São Paulo, Brasil",
-      "image":"/hotel4.jpg",
-      "price":114,
-      "ownerId":1,
-      "createdAt":"2024-07-28T21:20:32.023Z",
-      "updatedAt":"2024-07-28T21:33:00.706Z",
-      "owner":{
+      "id": 5,
+      "name": "Hotel Teste 5",
+      "description": "Hotel bonito",
+      "address": "Rua Dnc, 123",
+      "image": null,
+      "price": 300,
+      "ownerId": 1,
+      "createdAt": "2024-08-10T16:35:12.233Z",
+      "updatedAt": "2024-08-10T16:35:12.233Z",
+      "owner": {
         "id":1,
-        "name":"Fabio Tetsuo",
         "email":"fabio@teste.com",
-        "password":"$2b$10$cQnUP1kgnpp2sM2P0pWLMegDmyg86ONypgXFjaLvK6oWk3GnOCbCG",
+        "name":"Fabio Tetsuo",
         "role":"ADMIN",
-        "avatar":"3fa9959b-5883-4eeb-ac8f-89ff7d9b2b84tester.jpg",
+        "avatar":null,
         "createdAt":"2024-07-28T16:25:58.655Z",
-        "updatedAt":"2024-07-28T20:53:15.612Z"
-      }
+        "password":"12345"
+      } 
     },
     {
-      "id":6,
-      "name":"APTO FRENTE AO MAR -CORAÇÃO DO GONZAGA",
-      "description":"De frente para o mar, próximo a shoppings, restaurantes, bares e muito mais. Apartamento completo com Wifi e ar condicionado na sala e nos quartos, TV Smart a cabo com Net Flix",
-      "address":"Gonzaga, São Paulo, Brasil",
-      "image":null,
-      "price":680,
-      "ownerId":1,
-      "createdAt":"2024-07-28T21:21:26.569Z",
-      "updatedAt":"2024-07-28T21:21:26.569Z",
-      "owner":{
+      "id": 6,
+      "name": "Hotel Teste 6",
+      "description": "Hotel bonito",
+      "address": "Rua Dnc, 123",
+      "image": "/hotel4.jpg",
+      "price": 300,
+      "ownerId": 1,
+      "createdAt": "2024-08-10T16:35:12.233Z",
+      "updatedAt": "2024-08-10T16:35:12.233Z",
+      "owner": {
         "id":1,
-        "name":"Fabio Tetsuo",
         "email":"fabio@teste.com",
-        "password":"$2b$10$cQnUP1kgnpp2sM2P0pWLMegDmyg86ONypgXFjaLvK6oWk3GnOCbCG",
+        "name":"Fabio Tetsuo",
         "role":"ADMIN",
-        "avatar":"3fa9959b-5883-4eeb-ac8f-89ff7d9b2b84tester.jpg",
+        "avatar":null,
         "createdAt":"2024-07-28T16:25:58.655Z",
-        "updatedAt":"2024-07-28T20:53:15.612Z"
-      }
+        "password":"12345"
+      } 
     },
     {
-      "id":7,
-      "name":"Flat Estancofor Santos 1 Quadra da Praia",
-      "description":"Apartamento Flat Stanconfor Santos todo mobiliado, equipado, com utensílios de cozinha e roupa de cama e banho inclusos!",
-      "address":"Santos, São Paulo, Brasil",
-      "image":"/hotel5.jpg",
-      "price":318,
-      "ownerId":1,
-      "createdAt":"2024-07-28T21:22:24.213Z",
-      "updatedAt":"2024-07-28T21:33:18.641Z",
-      "owner":{
+      "id": 7,
+      "name": "Hotel Teste 7",
+      "description": "Hotel bonito",
+      "address": "Rua Dnc, 123",
+      "image": "/hotel5.jpg",
+      "price": 300,
+      "ownerId": 1,
+      "createdAt": "2024-08-10T16:35:12.233Z",
+      "updatedAt": "2024-08-10T16:35:12.233Z",
+      "owner": {
         "id":1,
-        "name":"Fabio Tetsuo",
         "email":"fabio@teste.com",
-        "password":"$2b$10$cQnUP1kgnpp2sM2P0pWLMegDmyg86ONypgXFjaLvK6oWk3GnOCbCG",
+        "name":"Fabio Tetsuo",
         "role":"ADMIN",
-        "avatar":"3fa9959b-5883-4eeb-ac8f-89ff7d9b2b84tester.jpg",
+        "avatar":null,
         "createdAt":"2024-07-28T16:25:58.655Z",
-        "updatedAt":"2024-07-28T20:53:15.612Z"
-      }
+        "password":"12345"
+      } 
     },
     {
-      "id":8,
-      "name":"Cabana Miralle I",
-      "description":"Exclusiva estrutura de steel frame em frente a Pedra Grande em Atibaia.",
-      "address":"Atibaia, São Paulo, Brasil",
-      "image":null,
-      "price":847,
-      "ownerId":1,
-      "createdAt":"2024-07-28T21:23:33.146Z",
-      "updatedAt":"2024-07-28T21:23:33.146Z",
-      "owner":{
+      "id": 8,
+      "name": "Hotel Teste 8",
+      "description": "Hotel bonito",
+      "address": "Rua Dnc, 123",
+      "image": "/hotel6.jpg",
+      "price": 300,
+      "ownerId": 1,
+      "createdAt": "2024-08-10T16:35:12.233Z",
+      "updatedAt": "2024-08-10T16:35:12.233Z",
+      "owner": {
         "id":1,
-        "name":"Fabio Tetsuo",
         "email":"fabio@teste.com",
-        "password":"$2b$10$cQnUP1kgnpp2sM2P0pWLMegDmyg86ONypgXFjaLvK6oWk3GnOCbCG",
+        "name":"Fabio Tetsuo",
         "role":"ADMIN",
-        "avatar":"3fa9959b-5883-4eeb-ac8f-89ff7d9b2b84tester.jpg",
+        "avatar":null,
         "createdAt":"2024-07-28T16:25:58.655Z",
-        "updatedAt":"2024-07-28T20:53:15.612Z"
-      }
+        "password":"12345"
+      } 
     },
     {
-      "id":9,
-      "name":"Oásis Urbano",
-      "description":"Exclusiva estrutura de steel frame em frente a Pedra Grande em Atibaia.",
-      "address":"Atibaia, São Paulo, Brasil",
-      "image":null,
-      "price":322,
-      "ownerId":1,
-      "createdAt":"2024-07-28T21:24:03.451Z",
-      "updatedAt":"2024-07-28T21:24:03.451Z",
-      "owner":{
+      "id": 9,
+      "name": "Hotel Teste 9",
+      "description": "Hotel bonito",
+      "address": "Rua Dnc, 123",
+      "image": "/hotel7.jpg",
+      "price": 300,
+      "ownerId": 1,
+      "createdAt": "2024-08-10T16:35:12.233Z",
+      "updatedAt": "2024-08-10T16:35:12.233Z",
+      "owner": {
         "id":1,
-        "name":"Fabio Tetsuo",
         "email":"fabio@teste.com",
-        "password":"$2b$10$cQnUP1kgnpp2sM2P0pWLMegDmyg86ONypgXFjaLvK6oWk3GnOCbCG",
+        "name":"Fabio Tetsuo",
         "role":"ADMIN",
-        "avatar":"3fa9959b-5883-4eeb-ac8f-89ff7d9b2b84tester.jpg",
+        "avatar":null,
         "createdAt":"2024-07-28T16:25:58.655Z",
-        "updatedAt":"2024-07-28T20:53:15.612Z"
-      }
+        "password":"12345"
+      } 
     },
     {
-      "id":10,
-      "name":"Cabana Maui: Piscina aquecida com vista incrível!",
-      "description":"Chalé charmoso e sofisticado, com uma vista incrível para as montanhas, localizado na região de Atibaia",
-      "address":"Atibaia, São Paulo, Brasil",
-      "image":null,
-      "price":1320,
-      "ownerId":1,
-      "createdAt":"2024-07-28T21:24:34.404Z",
-      "updatedAt":"2024-07-28T21:24:34.404Z",
-      "owner":{
+      "id": 10,
+      "name": "Hotel Teste 10",
+      "description": "Hotel bonito",
+      "address": "Rua Dnc, 123",
+      "image": null,
+      "price": 300,
+      "ownerId": 1,
+      "createdAt": "2024-08-10T16:35:12.233Z",
+      "updatedAt": "2024-08-10T16:35:12.233Z",
+      "owner": {
         "id":1,
-        "name":"Fabio Tetsuo",
         "email":"fabio@teste.com",
-        "password":"$2b$10$cQnUP1kgnpp2sM2P0pWLMegDmyg86ONypgXFjaLvK6oWk3GnOCbCG",
+        "name":"Fabio Tetsuo",
         "role":"ADMIN",
-        "avatar":"3fa9959b-5883-4eeb-ac8f-89ff7d9b2b84tester.jpg",
+        "avatar":null,
         "createdAt":"2024-07-28T16:25:58.655Z",
-        "updatedAt":"2024-07-28T20:53:15.612Z"
-      }
+        "password":"12345"
+      } 
     },
     {
-      "id":11,
-      "name":"Holyhousebu",
-      "description":"Chalé charmoso e sofisticado, com uma vista incrível para as montanhas, localizado na região de Atibaia",
-      "address":"Atibaia, São Paulo, Brasil",
-      "image":null,
-      "price":1224,
-      "ownerId":1,
-      "createdAt":"2024-07-28T21:25:08.102Z",
-      "updatedAt":"2024-07-28T21:25:08.102Z",
-      "owner":{
+      "id": 11,
+      "name": "Hotel Teste 11",
+      "description": "Hotel bonito",
+      "address": "Rua Dnc, 123",
+      "image": null,
+      "price": 300,
+      "ownerId": 1,
+      "createdAt": "2024-08-10T16:35:12.233Z",
+      "updatedAt": "2024-08-10T16:35:12.233Z",
+      "owner": {
         "id":1,
-        "name":"Fabio Tetsuo",
         "email":"fabio@teste.com",
-        "password":"$2b$10$cQnUP1kgnpp2sM2P0pWLMegDmyg86ONypgXFjaLvK6oWk3GnOCbCG",
+        "name":"Fabio Tetsuo",
         "role":"ADMIN",
-        "avatar":"3fa9959b-5883-4eeb-ac8f-89ff7d9b2b84tester.jpg",
+        "avatar":null,
         "createdAt":"2024-07-28T16:25:58.655Z",
-        "updatedAt":"2024-07-28T20:53:15.612Z"
-      }
+        "password":"12345"
+      } 
     }
   ]
 }
