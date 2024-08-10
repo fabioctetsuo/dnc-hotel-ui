@@ -12,7 +12,7 @@ const HotelDetail = async ({ params }: DetailPageProps) => {
   if (!session?.user) redirect("/login");
 
   const hotel = await getHotelDetail(Number(params.id));
-
+  console.log(hotel);
   return (
     <DetailPage
       previousPage="/"
