@@ -12,3 +12,10 @@ export type Hotel = {
     updatedAt: string;
     owner: User;
 }
+
+export type HotelPagination = {
+    total: number,
+    page: number,
+    per_page: number,
+    data: Hotel[]
+}

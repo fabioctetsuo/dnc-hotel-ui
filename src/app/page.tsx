@@ -4,11 +4,31 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { getHotels } from "@/app/api/hotels/action";
 import { getFormattedPrice } from "@/helpers/format/money";
+import Pagination from "@/components/Pagination";
 
-export default async function Home() {
+type SearchParams = {
+  page: string;
+  query: string;
+};
+
+type HomeProps = {
+  searchParams: SearchParams;
+};
+
+const LIMIT = 8;
+
+export default async function Home({ searchParams }: HomeProps) {
   const session = await getServerSession();
   if (!session?.user) redirect("/login");
-  const hotels = await getHotels();
+
+  const currentPage = Number(searchParams.page ?? 1);
+
+  const {
+    data: hotels,
+    per_page,
+    page,
+    total,
+  } = await getHotels(currentPage, LIMIT);
 
   console.log(hotels);
 
@@ -16,7 +36,7 @@ export default async function Home() {
     <div>
       <section className="grid grid-cols-1 gap-2 px-5 sm:grid-cols-2 sm:px-10 md:grid-cols-3 lg:grid-cols-4 mt-20">
         {hotels.map((hotel) => (
-          <Link href="/hotels/1" key={hotel.id}>
+          <Link href={`/hotels/${hotel.id}`} key={hotel.id}>
             <article className="flex flex-col">
               <div className="w-64 h-48">
                 <Image
@@ -36,6 +56,13 @@ export default async function Home() {
             </article>
           </Link>
         ))}
+      </section>
+      <section className="flex justify-center mt-4 mb-8">
+        <Pagination
+          currentPage={currentPage}
+          totalPages={Math.ceil(total / per_page)}
+          destination="/"
+        />
       </section>
     </div>
   );
