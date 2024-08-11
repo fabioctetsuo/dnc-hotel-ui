@@ -255,7 +255,7 @@
       "checkIn": "2024-08-30T03:00:00.000Z",
       "checkOut": "2024-09-05T03:00:00.000Z",
       "total": -7674,
-      "status": "PENDING",
+      "status": "CANCELLED",
       "createdAt": "2024-08-10T21:06:07.818Z",
       "updatedAt": "2024-08-10T21:06:07.818Z",
       "user": {

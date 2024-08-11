@@ -90,3 +90,14 @@ export async function getReservationsByHotel(hotel: Hotel): Promise<Reservation[
 
     return data;
 }
+
+export async function updateReservationStatus(reservationId: number, status: ReservationStatus) {
+    const accessToken = cookies().get('access_token')?.value;
+    if (!accessToken) redirect('/login');
+    
+    const { data } = await axios.patch(`/reservations/${reservationId}`, { status }, {
+        headers: { Authorization: `Bearer ${accessToken}` }
+    });
+
+    return data;
+}
