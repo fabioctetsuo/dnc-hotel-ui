@@ -3,7 +3,7 @@ import Button from "@/components/Button";
 import TextField from "@/components/Form/TextField";
 import Image from "next/image";
 import Link from "@/components/Link";
-import { recoverPassword } from "../../api/auth/password/route";
+import { recoverPassword } from "../../api/auth/password/actions";
 import { useFormState, useFormStatus } from "react-dom";
 import Alert from "@/components/Alert";
 import PasswordFields from "@/app/cadastrar/PasswordFields";
