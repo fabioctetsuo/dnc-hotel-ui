@@ -7,9 +7,9 @@ type ImageFieldProps = InputHTMLAttributes<HTMLInputElement> & {
   label: string;
 };
 
-const MAX_SIZE = 300 * 1024;
+const MAX_SIZE = 800 * 1024;
 
-const ImageField = ({ id, label, name }: ImageFieldProps) => {
+const ImageField = ({ id, label, name, defaultValue }: ImageFieldProps) => {
   const [image, setImage] = useState<string | null | ArrayBuffer>(null);
   const [exceededImageSize, setExceededImageSize] = useState(false);
 
@@ -32,7 +32,7 @@ const ImageField = ({ id, label, name }: ImageFieldProps) => {
   return (
     <div className="w-full flex flex-col justify-center items-center">
       <Image
-        src={image ? (image as string) : "/default-profile.jpg"}
+        src={(image as string) ?? defaultValue ?? "/default-profile.jpg"}
         width={100}
         height={100}
         alt="Profile picture"

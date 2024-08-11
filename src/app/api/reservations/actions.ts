@@ -47,3 +47,25 @@ export async function getReservationById(id: number): Promise<Reservation> {
 
     return { ...data, hotel };
 }
+
+export async function getReservationsByUser(): Promise<Reservation[]> {
+    const accessToken = cookies().get('access_token')?.value;
+    if (!accessToken) redirect('/login');
+    
+    const { data } = await axios.get(`/reservations/user`, {
+        headers: {
+            Authorization: `Bearer ${accessToken}`
+        }
+    })
+
+    if (data.length) {
+        const reservations = await Promise.all(data.map(async (reservation: Reservation) => {
+            const hotel = await getHotelDetail(reservation.hotelId);
+            return { ...reservation, hotel }
+        }));
+
+        return reservations
+    }
+
+    return data;
+}

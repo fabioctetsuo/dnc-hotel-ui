@@ -1,5 +1,6 @@
 import { getReservationById } from "@/app/api/reservations/actions";
 import Link from "@/components/Link";
+import UserDetail from "@/components/UserDetail";
 import { DetailPageProps } from "@/types/DetailPage";
 import { getServerSession } from "next-auth";
 import Image from "next/image";
@@ -22,21 +23,7 @@ const SolicitacaoReservaPage = async ({ params }: DetailPageProps) => {
           <h1 className="font-bold text-4xl">
             Sua solicitação de reserva na {hotel.name} foi enviada!
           </h1>
-          <div className="mt-4 flex">
-            <Image
-              src={hotel.owner.avatar ?? "/default-profile.jpg"}
-              alt={`Foto do anfitrão`}
-              width={56}
-              height={56}
-              className="rounded-full w-14 h-14 object-cover"
-            />
-            <div className="flex flex-col ml-2 justify-center">
-              <b>Anfitriã(o): {hotel.owner.name}</b>
-              <span className="font-medium">
-                Desde {new Date(hotel.owner.createdAt).getFullYear()}
-              </span>
-            </div>
-          </div>
+          <UserDetail user={hotel.owner} />
           <hr className="mt-4" />
           <div className="mt-4 flex flex-col">
             <h3 className="font-bold text-2xl">
