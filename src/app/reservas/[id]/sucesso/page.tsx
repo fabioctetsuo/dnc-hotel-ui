@@ -1,6 +1,6 @@
 import { getReservationById } from "@/app/api/reservations/actions";
 import Link from "@/components/Link";
-import UserDetail from "@/components/UserDetail";
+import UserDetail from "@/components/UserDetail/server";
 import { DetailPageProps } from "@/types/DetailPage";
 import { getServerSession } from "next-auth";
 import Image from "next/image";

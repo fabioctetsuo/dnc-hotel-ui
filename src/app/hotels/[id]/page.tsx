@@ -5,7 +5,7 @@ import HotelBookingForm from "./HotelBookingForm";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 import { DetailPageProps } from "@/types/DetailPage";
-import UserDetail from "@/components/UserDetail";
+import UserDetail from "@/components/UserDetail/server";
 
 const HotelDetail = async ({ params }: DetailPageProps) => {
   const session = await getServerSession();

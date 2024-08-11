@@ -24,7 +24,7 @@ export async function signup(prevState: any, formData: FormData) {
             })
         }
     } catch (error) {
-        console.log('trata o erro', {error})
+        // console.log('trata o erro', {error})
         
         return { ...prevState, error: true, message: 'Não foi possível cadastrar usuário' }
     }
